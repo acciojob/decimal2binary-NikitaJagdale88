@@ -1,8 +1,19 @@
-const decimalToBinary = (num) => {
-  let binaryStr = num.toString(2);
-  return binaryStr;
-};
+// function threeSum(arr, target){
+// }
+// module.exports = threeSum;
 
-const num = parseInt(process.argv[2]);
-const binaryStr = decimalToBinary(num);
-console.log(binaryStr);
+function decToBin(num){
+
+	let pow=1;
+	let bin=0;
+
+	while(num!=0){
+		let rem=num%2;
+		bin=bin+rem*pow;
+		pow=pow*10;
+		num=parseInt(num/2);
+	}
+	return bin;
+}
+
+module.exports=decToBin;
