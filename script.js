@@ -1,28 +1,22 @@
-// function threeSum(arr, target){
-// }
-// module.exports = threeSum;
 function threeSum(arr, target) {
- let binary = "";
-  while (decimal > 0) {
-    binary = (decimal % 2) + binary;
-    decimal = Math.floor(decimal / 2);
-  }
-  return binary;
+// write your code here
+	var diff = Number.MAX_VALUE;
+        var ans = 0;
+
+        for(let i = 0; i < arr.length; i++){
+            for(let j = i + 1; j < arr.length; j++){
+                for(let k = j + 1; k < arr.length; k++){
+                    let sum = arr[i]  + arr[j] + arr[k];
+
+                    if(Math.abs(sum - target) < diff){
+                        diff = Math.abs(sum - target);
+                        ans = sum;
+                    }
+                }
+            }
+        }
+        return ans;
+  
 }
 
-// module.exports = threeSum;
-// function decToBin(num){
-
-// 	let pow=1;
-// 	let bin=0;
-
-// 	while(num!=0){
-// 		let rem=num%2;
-// 		bin=bin+rem*pow;
-// 		pow=pow*10;
-// 		num=parseInt(num/2);
-// 	}
-// 	return bin;
-// }
-
-// module.exports=decToBin;
+module.exports = threeSum;
