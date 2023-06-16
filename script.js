@@ -1,22 +1,12 @@
-function threeSum(arr, target) {
-// write your code here
-	var diff = Number.MAX_VALUE;
-        var ans = 0;
-
-        for(let i = 0; i < arr.length; i++){
-            for(let j = i + 1; j < arr.length; j++){
-                for(let k = j + 1; k < arr.length; k++){
-                    let sum = arr[i]  + arr[j] + arr[k];
-
-                    if(Math.abs(sum - target) < diff){
-                        diff = Math.abs(sum - target);
-                        ans = sum;
-                    }
-                }
-            }
-        }
-        return ans;
-  
+const num = parseInt(prompt('Enter a decimal number: '));
+function decimalToBinary(num){
+    let binaryStr = ""
+    while(num>0){
+        let rem = num%2;
+        binaryStr = binaryStr + rem.toString()
+ 
+        num = Math.floor(num/2)
+    }
+    return binaryStr.split("").reverse().join("")
 }
-
-module.exports = threeSum;
+module.exports = decimalToBinary;
