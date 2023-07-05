@@ -1,12 +1,12 @@
 const num = parseInt(prompt('Enter a decimal number: '));
 function decimalToBinary(num){
-    let binaryStr = ""
-    while(num>0){
-        let rem = num%2;
-        binaryStr = binaryStr + rem.toString()
- 
-        num = Math.floor(num/2)
+    if (num === 0)
+	{
+    return '0'; 
     }
-    return binaryStr.split("").reverse().join("")
+    let binary = '';
+    while (num > 0) {
+    binary = (num % 2) + binary;
+    num = Math.floor(num / 2);
 }
-module.exports = decimalToBinary;
+return binary;
