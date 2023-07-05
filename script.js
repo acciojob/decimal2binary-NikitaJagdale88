@@ -1,8 +1,9 @@
 const num = parseInt(prompt('Enter a decimal number: '));
-function decimalToBinary(num){
+function decimalToBinary(num)
+{
     if (num === 0)
 	{
-    return '0'; 
+      return '0'; 
     }
     let binary = '';
     while (num > 0) {
