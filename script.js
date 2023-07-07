@@ -1,13 +1,5 @@
-const num = parseInt(prompt('Enter a decimal number: '));
-function decimalToBinary(num)
-{
-    if (num === 0)
-	{
-      return '0'; 
-    }
-    let binary = '';
-    while (num > 0) {
-    binary = (num % 2) + binary;
-    num = Math.floor(num / 2);
+function decimalToBinary(num) {
+  // Write your code here
 }
-return binary;
+
+window.decimalToBinary = decimalToBinary;
